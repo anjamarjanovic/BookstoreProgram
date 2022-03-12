@@ -1,0 +1,21 @@
+@mixin main {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Gentium Book Basic', serif; 
+    }
+    body{
+      background-color: rgb(148, 146, 146);
+  }
+  }
+
+  
+  
+  @mixin mobile {
+  @media(max-width: 650px){
+  @content;
+    }
+  }
+  
+  

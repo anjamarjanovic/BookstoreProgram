@@ -4,11 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/images/logo.png" />
     <script src="./assets/vendor.js" defer></script>
     <script src="./assets/app.js" defer></script>
     <title>BookstoreProgram</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#search">Search Book</a></li>
+            <li><a href="#add">Add New Book</a></li>
+            <li><a href="#delete">Delete Book</a></li>
+        </ul>
+    </nav>
+    <section id="all">
+        <h1>Our Stock</h1>
+        <h2>All books</h2>
+        <div> 
+            <div class="book-container">
+                <div class="row">
+                     <div class="book-box">
+                         <img src="./assets/images/orvel.jpg" alt="miser" width="100%" height="100%" >
+                     </div>
+                     <div class="book-box">
+                        <img src="./assets/images/headhunters.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/specialMission.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/frankl.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/Harry.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/misery.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/paulo.jpg" alt="miser" width="100%" height="100%" >
+                    </div>
+                    <div class="book-box">
+                        <img src="./assets/images/jalom.jpg" alt="miser" width="100%" height="100%" cover >
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section id="search">
+        <h2>Search Book</h2>
+        <form>
+        <input type="text" name="search" id="search-book-input" placeholder="Search by name or author">
+        <button type="button" id="search-book-button" class="btn btn-search">Search</button>
+    </form>
+    <div id="show-book"></div>
+    </section>
+    <section id="add">
+        <h2 class="add-book-title">Add new book</h2>
+      <form>
+          <label for="name">Book's name</label>
+          <input id="book-name-input" type="text" placeholder="Enter book's name">
+          <label for="writer">Book's writer</label>
+          <input id="book-writter-input" type="text" placeholder="Enter book's writer">
+          <label for="attName">Additional Attribute Name</label>
+          <input id="addi-att-name" type="text" placeholder="Enter additional attribute name">
+          <label for="attValue">Additional Attribute Value</label>
+          <input id="addi-att-value" type="text" placeholder="Enter additional attribute value">
+          <button id="add-book-btn" type="submit" class="btn btn-sbm">Add</button>
+    </form>
+    </section>
+    <section id="delete">
+        <h2>Delete Book</h2>
+        <form >
+        <input id="book-delete-input" type="text" placeholder="Enter book's name in order to delete it">
+        <button id="delete-book-btn" type="button" class="btn btn-del">Delete</button>
+    </form>
+    </section>
 </body>
 </html>
