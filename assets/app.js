@@ -49,7 +49,13 @@ const findBook = (userInput)=> {
                .toLowerCase()
                .split(' ')
                .join('');
-const foundBook = books.find(book=>book.name.trim().toLowerCase().split(' ').join('') ===searchTerm);
+const foundBook = books.filter(book=>{ 
+const partsOfNames = book.name.toLowerCase().trim().split(' ');
+const books = partsOfNames.includes(searchTerm);
+return books
+});
+
+
 if(searchBookInput.value ===''){
     alert(`please fill the search input`)
     return
@@ -71,10 +77,15 @@ const addedBook = {
     name,
     writter
 }
+const bookExist = books.some(book=> book.name.trim().toLowerCase().split(' ').join(''))
+if(bookExist){
+    alert(`Book with provided name ${addedBook.name} already exist`);
+    return;
+}
 if(attributeName !== '' && attributeValue !== ''){
     addedBook[attributeName] =attributeValue;
 }
-if(bookNameInput.value === '' && bookWritterInput.value ==''){
+if(bookNameInput.value === '' || bookWritterInput.value ==''){
     alert(`Please fill all the input fiels`)
     return
 }
